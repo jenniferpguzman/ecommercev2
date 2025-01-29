@@ -10,10 +10,11 @@ function Products() {
 
   // Fetch products from the backend API when the component mounts
   useEffect(() => {
-    Axios.get('http://localhost:8081/products')
+    Axios.get('/api/products')
       .then((response) => {
         setProduct(response.data);  // Store all products from API
         setCategory(response.data);  // Initially set the filtered category to all products
+        console.log(response.data, '<<< response data')
       })
       .catch((err) => console.log(err));
   }, []);
@@ -56,7 +57,7 @@ function Products() {
       <button onClick={setLowtoHigh}>Price: Low to High</button>
       <button onClick={setHighToLow}>Price: High to Low</button>
     </div>
-
+    
     {/* Display filtered and sorted products */}
     {category.length === 0 ? (
       <p>No products found</p>

@@ -7,7 +7,7 @@ body{
 }
 
 .hero_deals{
-    background-image: url(images/background.jpeg);
+    background-image: url('/images/background.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     height:500px;
