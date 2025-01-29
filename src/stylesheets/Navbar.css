@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cormorant Garamond', sans-serif;
+    background-color: #eaeaea;
+}
+
+/* Navbar Styles */
+.nav_bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navbar title */
+.nav_bar .title {
+    font-size: 25px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    margin: 0;
+    text-align: left;
+    padding: 0 10px;
+}
+
+/* Navbar links container */
+.nav_links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Unordered list inside nav_links */
+.nav_links ul {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Links inside list items */
+.nav_links a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for links */
+.nav_links a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+    .nav_bar {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    /* Adjust title position */
+    .nav_bar .title {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    /* Stack the links vertically on smaller screens */
+    .nav_links ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav_links a {
+        font-size: 1.2rem;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav_bar {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    /* Title font-size for smaller screens */
+    .nav_bar .title {
+        font-size: 20px;
+    }
+
+    /* Links font-size for smaller screens */
+    .nav_links a {
+        font-size: 1.1rem;
+    }
+}

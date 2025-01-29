@@ -1,0 +1,210 @@
+body{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family:Cormorant Garamond, sans-serif;
+    background-color: #eaeaea;
+}
+
+.hero_deals{
+    background-image: url(images/background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:500px;
+}
+
+
+.hero_text{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:black;
+    background-color: #e8d1a7;
+    margin-top:35px;
+}
+
+.box_to_bags{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 5px;
+    padding:20px;
+}
+
+
+.boxbg1{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    position:relative;
+}
+
+img{
+    width:100%;
+    height:300px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.filler_text{
+    display: flex;
+    justify-content: center;
+    color:white;
+    background-color: black;
+    width:500px;
+}
+
+.boxbg2{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    position:relative;
+}
+
+.boxbg3{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    position:relative;
+}
+
+.discription{
+    display:flex;
+    justify-content: center;
+    font-size:30px;
+}
+
+.fruitbag img{
+    width: 600px;
+    height:600px;
+}
+
+.fruitbag{
+   display:flex;
+   flex-direction: row;
+   gap:10px;
+    justify-content: center;
+    padding:35px;
+}
+.story{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    background-color:#e8d1a7;
+    ;
+    border-radius: 10px;
+    padding:30px;
+}
+
+.slider {
+    width: 400px; /* Fixed width for a modern look */
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider_container {
+    display: flex;
+    width: 300%; /* 3 images side by side */
+    transition: transform 0.5s ease-out;
+    animation: slide 10s infinite ease-out;
+}
+
+.slide {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+  @keyframes slide {
+    0% {
+      transform: translateX(0%);
+    }
+    25%{
+      transform: translateX(-100%);
+    }
+    50%{
+      transform: translateX(-200%);
+    }
+    75% {
+      transform: translateX(-300%);
+    }
+    /* 100% {
+        transform: translateX(0);
+    } */
+}
+@media (max-width: 600px) {
+    .hero_text h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero_text h4 {
+        font-size: 1.2rem;
+    }
+
+    .box_to_bags {
+        flex-direction: column;
+    }
+
+    .boxbg1, .boxbg2, .boxbg3 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .fruitbag img {
+        width: 90%;
+        height: auto;
+    }
+}
+
+@media (min-width:600px) and (max-width:900px){
+    .box_to_bags {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    .hero_text h2 {
+        font-size: 35px;
+    }
+    .hero_text h4 {
+        font-size: 20px;
+    }
+}
+
+@media (min-width:900px){
+    .hero_deals {
+        height: 350px; 
+    }
+
+    .hero_text h2 {
+        font-size: 55px;
+    }
+
+    .hero_text h4 {
+        font-size:35px;
+    }
+    .box_to_bags {
+        display:flex;
+        flex-direction: row;
+        gap:25px;
+
+    }
+} 
