@@ -10,7 +10,7 @@ import Footer from './Components/Footer'
 function App() {
   const [data, setData] =useState([]);
   useEffect(() => {
-    Axios.get('http://localhost:3000/api/products')
+    Axios.get('/api/products')
     // .then(res => res.json())
     .then((data) => setData(data.data))
     .catch(err => console.log(err));
