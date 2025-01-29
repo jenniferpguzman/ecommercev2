@@ -48,9 +48,9 @@ app.get('/api/products', async (req, res) => {
         const [rows] = await db.query("SELECT * FROM products");
         console.log(rows, '<< data');
         return res.json(rows);
-    } catch (Error) {
-        console.error('Error fetching products:', Error);
-        return res.status(500).json({ error: 'Internal Server Error' });
+    } catch (err) {
+        console.error('Error fetching products:', err);
+        return res.status(3306).json({ error: 'Internal Server Error' });
     }
 });
 
