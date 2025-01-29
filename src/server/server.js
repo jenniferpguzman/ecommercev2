@@ -2,10 +2,15 @@ import express from 'express';
 import mysql from 'mysql2';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import path from 'path';
+import path, { dirname } from 'path';
+import { fileURLToPath } from 'url';
 
 // Load environment variables from .env file
 dotenv.config();
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+const distPath = path.join(__dirname, '..', '..', 'dist')
 
 
 const app = express()
@@ -42,10 +47,9 @@ app.get('/products', (req,res) => {
 
 })
 
-app.use(express.static(path.join(__dirname, '../dist')));
 
 app.get('*', (req,res) => {
-    res.sendFile(path.join(__dirname, '../dist', 'index.html'));
+    res.sendFile(path.join(distPath, 'index.html'));
 })
 
 app.listen(process.env.PORT || PORT ,()=> {
