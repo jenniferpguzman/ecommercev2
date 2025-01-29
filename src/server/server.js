@@ -15,7 +15,7 @@ const distPath = path.join(__dirname, '..', '..', 'dist')
 
 const app = express()
 
-const PORT = 3000;
+const PORT = process.env.PORT;
 
 app.use(cors({
     origin: process.env.CLIENT_URL,
@@ -52,7 +52,7 @@ app.get('*', (req,res) => {
     res.sendFile(path.join(distPath, 'index.html'));
 })
 
-app.listen(process.env.PORT || PORT ,()=> {
+app.listen(PORT ,()=> {
     console.log(`listening ${PORT}`);
 })
 
