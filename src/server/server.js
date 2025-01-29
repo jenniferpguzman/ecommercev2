@@ -50,7 +50,7 @@ app.get('/api/products', async (req, res) => {
         return res.json(rows);
     } catch (err) {
         console.error('Error fetching products:', err);
-        return res.status(3306).json({ error: 'Internal Server Error' });
+        return res.status(500).json({ error: 'Internal Server Error' });
     }
 });
 
