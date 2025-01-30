@@ -3,7 +3,10 @@ import '../stylesheets/Contact.css'
 import '../stylesheets/Navbar.css'
 import '../stylesheets/Footer.css'
 
+//creating my functional component
 const Contact = () => {
+  //using useState to set state variable as fromData which is the values of the form fields, inititially set to empty strings
+  //setFormData is the function that is called to update the formData, when a user types something
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -13,12 +16,18 @@ const Contact = () => {
 
   const [errors, setErrors] = useState([]); // Add state to track errors
 
-  // Handle form input changes
+  // Handle form input changes, when user types something into the fields
+  //e is event, like typing
   const handleChange = (e) => {
-    const { id, value } = e.target;
+    //extracting input values 
+    const { id, value } = e.target; //referring to the specific input field that triggered the event
+    //id- indicates what field is being changed
+    //value is the input the user is inputting
     setFormData({
+      //formData is called in this spread operator , getting the exisiting properties
       ...formData,
-      [id]: value,
+      [id]: value, //setting the property of the object based on the input field
+      //what user types in the fields will update in the formData
     });
   };
 
@@ -78,28 +87,40 @@ const Contact = () => {
               type="text"
               id="firstName"
               placeholder="First Name"
+              //getting the input field in component state
               value={formData.firstName}
+              //onChange will be called when user types in the input field
+              //handlechange is the function in my component that updates the formData state
               onChange={handleChange}
             />
             <input
               type="text"
               id="lastName"
               placeholder="Last Name"
+              //getting the input field in component state
               value={formData.lastName}
+              //onChange will be called when user types in the input field
+              //handlechange is the function in my component that updates the formData state
               onChange={handleChange}
             />
             <input
               type="email"
               id="email"
               placeholder="Email"
+              //getting the input field in component state
               value={formData.email}
+            //onChange will be called when user types in the input field
+              //handlechange is the function in my component that updates the formData state 
               onChange={handleChange}
             />
             <h3>Leave Us a Comment</h3>
             <textarea
               name="comments"
               id="comments"
+              //getting the input field in component state
               value={formData.comments}
+              //onChange will be called when user types in the input field
+              //handlechange is the function in my component that updates the formData state
               onChange={handleChange}
             ></textarea>
             <input type="submit" value="Send" id="button" />

@@ -19,7 +19,6 @@ const Home = () => {
             <div>
               <img src="images/windowbag.jpg" alt="Person holding bag out" />
               <div className="description">
-                <p>Le sac à main parfait pour elle</p>
               </div>
             </div>
           </div>
@@ -28,7 +27,6 @@ const Home = () => {
             <div>
               <img src="images/IMG_1212.JPG" alt="Bag floating" />
               <div className="description">
-                <p>beau sac à main, femme magnifique</p>
               </div>
             </div>
           </div>
@@ -37,7 +35,6 @@ const Home = () => {
             <div>
               <img src="images/stairbag.jpg" alt="Bags on stairs" />
               <div className="description">
-                <p>rêve grand, achète le sac à main</p>
               </div>
             </div>
           </div>
